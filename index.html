@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Чистовой ремонт</title>
+	
+   <link rel="stylesheet" href="css/jquery.fancybox.min.css"> 
+   <link rel="stylesheet" href="css/nouislider.min.css"> 
+   <link rel="stylesheet" href="css/style.css">  
+   <link rel="icon" sizes="120x120" href="img/apple-icon-120x120.png">
+</head>
+<body>
+<div class="wrapper">
+	<header class="header">
+		<div class="header__container">
+			<a href="#" class="header__logo">
+				<img src="img/main/logo.png" alt="">
+			</a>
+			<nav class="header__menu menu">
+				<ul class="menu__list">
+					<li class="menu__item"><a href="#cost" class="menu__link">Цены</a></li>
+					<li class="menu__item"><a href="#projects" class="menu__link">Проекты</a></li>
+					<li class="menu__item"><a href="#reviews" class="menu__link">Отзывы</a></li>
+					<li class="menu__item"><a href="#contacts" class="menu__link">Контакты</a></li>
+				</ul>
+			</nav>
+			<a href="#popup" class="header__btn button">
+				Бесплатный замер
+			</a>
+			<a href="tel:73471234567"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z"/></svg></a>
+			<div data-da=".menu__list, 808, last" class="header__actions">
+				<div class="header__number">
+					<a href="tel:73471234567">+7 (347) 123-45-67</a>	
+					<a href="tel:73471234567" class="header__whatsapp"><img src="img/main/whatsapp.png" alt=""></a>			
+				</div>
+				<a href="#" class="header__call">Заказать звонок</a>
+				<a href="#" class="header__time">Ежедневно 08:00-22:00</a>
+			</div>
+			<div class="header__burger"><span></span></div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="main__container">
+			<div class="main__content">
+				<h1 class="main__title">
+					Ремонт и отделка квартир в Уфе<span> от 2290 ₽/м2</span>
+				</h1>
+				<div class="main__subtitle">
+					Работаем по договору: <br> с фиксированной стоимостью и сроками
+					<p><span>Берем в работу проекты от 80 000₽</span> <br>
+					(не включая материал)</p>
+				</div>
+				<ul class="main__list">
+					<li class="main__item">
+						<img src="img/main/1.png" alt="">
+						Бесплатный выезд замерщика в день обращения
+					</li>
+					<li class="main__item">
+						<img src="img/main/2.png" alt="">
+						Даем гарантию на свои работы до 3 лет
+					</li>
+					<li class="main__item">
+						<img src="img/main/3.png" alt="">
+						Регулярно присылаем фото и видеоотчет с объекта
+					</li>
+					<li class="main__item">
+						<img src="img/main/4.png" alt="">
+						Бесплатно убираем квартиру после ремонта
+					</li>
+				</ul>
+			</div>
+			<form action="#" class="main__form form-main" onsubmit="send(event, 'send.php')">
+				<div class="form-main__title">
+					Рассчитайте стоимость ремонта
+				</div>
+				<div class="form-main__roomtype">
+					<div class="form-main__subtitle">
+						Тип помещения:
+					</div>
+              <div class="checkbox-first">
+               <input  type="checkbox" name="checkbox1" value="Вторичка" id="checkbox1"> 
+                <label for="checkbox1"> <span></span>Вторичка</label>
+              </div>
+                <div class="checkbox-second">
+                  <input  type="checkbox" name="checkbox1" value="Новостройка" id="checkbox2"> 
+                  <label for="checkbox2"><span></span>Новостройка</label>
+              </div>					
+				</div>
+				<div class="form-main__repairtype">
+					<div class="form-main__subtitle">
+						Тип ремонта:
+					</div>
+              <div class="checkbox-thirth">
+               <input  type="checkbox" name="checkbox2" value="Капитальный" id="checkbox3"> 
+                <label for="checkbox3"> <span></span>Капитальный</label>
+              </div>
+               <div class="checkbox-forth">
+                  <input  type="checkbox" name="checkbox2" value="Дизайнерский" id="checkbox4"> 
+                  <label for="checkbox4"><span></span>Дизайнерский</label>
+              </div>	
+               <div class="checkbox-fivth">
+                  <input  type="checkbox" name="checkbox2" value="Косметический" id="checkbox5"> 
+                  <label for="checkbox5"><span></span>Косметический</label>
+              </div>	              				
+				</div>			
+				<div class="form-main__rangeslider">
+					<div class="form-main__subtitle">
+						Площадь квартиры:
+					</div>				
+					<div class="form-main__range" id="slider">
+						<div class="" id="slider-margin-value">20</div>
+					</div>		
+					<input type="text" name="square" class="hidden">
+					<div class="form-main__startend">
+						<div class="form-main__start">
+							1 м<span>2</span>
+						</div>
+						<div class="form-main__end">
+							250 м<span>2</span>
+						</div>							
+					</div>
+				</div>
+				<div class="form-main__phone">
+					<div class="form-main__subtitle">
+						Как к вам обращаться:
+					</div>
+					<input type="text" name="name" class="form-main__number">					
+				</div>								
+				<div class="form-main__phone">
+					<div class="form-main__subtitle">
+						Ваш телефон:
+					</div>
+					<input type="text" name="phonenumber" class="form-main__number" placeholder="+7 347 123 45 67" onfocus="this.placeholder = ''"
+               onblur="this.placeholder = '+7 347 123 45 67'">					
+				</div>
+				<button class="form-main__button">Рассчитать стоимость и узнать скидку</button>
+				<div class="form-main__footer">
+					Отправляя заявку, вы соглашаетесь с <br> <a href="#">политикой конфиденциальности</a>
+				</div>
+			</form>
+		</div>
+	</main>
+	<section id="cost" class="cost">
+		<div class="cost__container">
+			<div class="cost__title title">Стоимость ремонта</div>
+			<div class="cost__subtitle">Берем в работу проекты от 80 000₽ (не включая материал)</div>
+			<div class="cost__tabs tabs">
+				<nav class="tabs__items">
+					<a class="tabs__item tabs__item-1 active">Косметический</a>
+					<a class="tabs__item tabs__item-2">Черновой</a>
+					<a class="tabs__item tabs__item-3">Капитальный</a>
+					<a class="tabs__item tabs__item-4">Дизайнерский</a>
+				</nav>
+				<div class="tabs__body">
+					<div id="tab_01" class="tabs__block target">
+						<div class="tabs__image">
+							<img src="img/tabs/1.png" alt="">
+						</div>
+						<div class="tabs__column">
+							<div class="tabs__header">
+								<p>Косметический </p> <p>от 5 дней</p>
+							</div>
+							<div class="tabs__titleli">
+								Стены
+							</div>
+							<ul class="tabs__list">
+								<li class="tabs__link">Грунтовка поверхности</li>
+								<li class="tabs__link">Поклейка обоев</li>
+								<li class="tabs__link">Покраска стен</li>
+								<li class="tabs__link">Устранение мелких дефектов</li>
+							</ul>
+							<div class="tabs__titleli">
+								Пол
+							</div>
+							<ul class="tabs__list">
+								<li class="tabs__link">Демонтаж старого покрытия</li>
+								<li class="tabs__link">Укладка подложки</li>
+								<li class="tabs__link">Монтаж напольного покрытия</li>
+							</ul>	
+							<div class="tabs__titleli">
+								Ванная
+							</div>
+							<ul class="tabs__list">
+								<li class="tabs__link">Замена сантехники</li>
+							</ul>	
+							<div class="tabs__titleli">
+								Потолок
+							</div>
+							<ul class="tabs__list">
+								<li class="tabs__link">Шпаклевка</li>
+								<li class="tabs__link">Покраска потолка</li>
+								<li class="tabs__link">Монтаж натяжного потолка</li>
+							</ul>																					
+						</div>
+						<div class="tabs__column">
+							<div class="tabs__header">
+								<p>Косметический </p> <p>от 5 дней</p>
+							</div>							
+							<div class="tabs__titleli">
+								Чистовые материалы <p>от 1 590 ₽/м2</p>
+							</div>
+							<ul class="tabs__list">
+								<li class="tabs__link">Декоративные элементы</li>
+								<li class="tabs__link">Лакокрасочные материалы</li>
+								<li class="tabs__link">Напольные покрытия</li>
+								<li class="tabs__link">Реечный и натяжной потолок</li>
+								<li class="tabs__link">Стеновые материалы</li>
+							</ul>
+							<div class="tabs__titleli">
+								Черновые материалы <p>от 700 ₽/м2</p>
+							</div>
+							<ul class="tabs__list">
+								<li class="tabs__link">Гипсокартон и профили</li>
+								<li class="tabs__link">Провода и трубы</li>
+								<li class="tabs__link">Строительные смеси</li>
+							</ul>	
+							<div class="tabs__cost">
+								<p>Стоимость работ</p>
+								<span>от 2 290 ₽/м2</span>
+							</div>	
+							<a href="" class="tabs__btn">Рассчитать стоимость ремонта</a>
+						</div>				
+					</div>
+					<div id="tab_02" class="tabs__block">
+						<div class="tabs__image">
+							<img src="img/tabs/1.png" alt="">
+						</div>
+						<div class="tabs__column">
+							<div class="tabs__header">
+								<p>Черновой </p> <p>от 5 дней</p>
+							</div>
+							<div class="tabs__titleli">
+								Пол
+							</div>
+							<ul class="tabs__list">
+								<li class="tabs__link">Демонтаж старого покрытия</li>
+								<li class="tabs__link">Укладка подложки</li>
+								<li class="tabs__link">Монтаж напольного покрытия</li>
+							</ul>	
+							<div class="tabs__titleli">
+								Ванная
+							</div>
+							<ul class="tabs__list">
+								<li class="tabs__link">Замена сантехники</li>
+							</ul>	
+							<div class="tabs__titleli">
+								Потолок
+							</div>
+							<ul class="tabs__list">
+								<li class="tabs__link">Шпаклевка</li>
+								<li class="tabs__link">Покраска потолка</li>
+								<li class="tabs__link">Монтаж натяжного потолка</li>
+							</ul>																					
+						</div>
+						<div class="tabs__column">
+							<div class="tabs__header">
+								<p>Косметический </p> <p>от 5 дней</p>
+							</div>							
+							<div class="tabs__titleli">
+								Чистовые материалы <p>от 1 590 ₽/м2</p>
+							</div>
+							<ul class="tabs__list">
+								<li class="tabs__link">Декоративные элементы</li>
+								<li class="tabs__link">Лакокрасочные материалы</li>
+								<li class="tabs__link">Напольные покрытия</li>
+								<li class="tabs__link">Реечный и натяжной потолок</li>
+								<li class="tabs__link">Стеновые материалы</li>
+							</ul>
+							<div class="tabs__titleli">
+								Черновые материалы <p>от 700 ₽/м2</p>
+							</div>
+							<ul class="tabs__list">
+								<li class="tabs__link">Гипсокартон и профили</li>
+								<li class="tabs__link">Провода и трубы</li>
+								<li class="tabs__link">Строительные смеси</li>
+							</ul>	
+							<div class="tabs__cost">
+								<p>Стоимость работ</p>
+								<span>от 2 290 ₽/м2</span>
+							</div>	
+							<a href="#" class="tabs__btn button">Рассчитать стоимость ремонта</a>																													
+						</div>				
+					</div>
+					<div id="tab_03" class="tabs__block">
+						<div class="tabs__image">
+							<img src="img/tabs/1.png" alt="">
+						</div>
+						<div class="tabs__column">
+							<div class="tabs__header">
+								<p>Капитальный </p> <p>от 5 дней</p>
+							</div>
+							<div class="tabs__titleli">
+								Стены
+							</div>
+							<ul class="tabs__list">
+								<li class="tabs__link">Грунтовка поверхности</li>
+								<li class="tabs__link">Поклейка обоев</li>
+								<li class="tabs__link">Покраска стен</li>
+								<li class="tabs__link">Устранение мелких дефектов</li>
+							</ul>
+							<div class="tabs__titleli">
+								Потолок
+							</div>
+							<ul class="tabs__list">
+								<li class="tabs__link">Шпаклевка</li>
+								<li class="tabs__link">Покраска потолка</li>
+								<li class="tabs__link">Монтаж натяжного потолка</li>
+							</ul>																					
+						</div>
+						<div class="tabs__column">
+							<div class="tabs__header">
+								<p>Косметический </p> <p>от 5 дней</p>
+							</div>							
+							<div class="tabs__titleli">
+								Чистовые материалы <p>от 1 590 ₽/м2</p>
+							</div>
+							<ul class="tabs__list">
+								<li class="tabs__link">Декоративные элементы</li>
+								<li class="tabs__link">Лакокрасочные материалы</li>
+								<li class="tabs__link">Напольные покрытия</li>
+								<li class="tabs__link">Реечный и натяжной потолок</li>
+								<li class="tabs__link">Стеновые материалы</li>
+							</ul>
+							<div class="tabs__titleli">
+								Черновые материалы <p>от 700 ₽/м2</p>
+							</div>
+							<ul class="tabs__list">
+								<li class="tabs__link">Гипсокартон и профили</li>
+								<li class="tabs__link">Провода и трубы</li>
+								<li class="tabs__link">Строительные смеси</li>
+							</ul>	
+							<div class="tabs__cost">
+								<p>Стоимость работ</p>
+								<span>от 2 290 ₽/м2</span>
+							</div>	
+							<a href="#" class="tabs__btn button">Рассчитать стоимость ремонта</a>																												
+						</div>				
+					</div>
+					<div id="tab_04" class="tabs__block">
+						<div class="tabs__image">
+							<img src="img/tabs/1.png" alt="">
+						</div>
+						<div class="tabs__column">
+							<div class="tabs__header">
+								<p>Дизайнерский </p> <p>от 5 дней</p>
+							</div>
+							<div class="tabs__titleli">
+								Стены
+							</div>
+							<ul class="tabs__list">
+								<li class="tabs__link">Грунтовка поверхности</li>
+								<li class="tabs__link">Поклейка обоев</li>
+								<li class="tabs__link">Покраска стен</li>
+								<li class="tabs__link">Устранение мелких дефектов</li>
+							</ul>
+							<div class="tabs__titleli">
+								Пол
+							</div>
+							<ul class="tabs__list">
+								<li class="tabs__link">Демонтаж старого покрытия</li>
+								<li class="tabs__link">Укладка подложки</li>
+								<li class="tabs__link">Монтаж напольного покрытия</li>
+							</ul>	
+							<div class="tabs__titleli">
+								Ванная
+							</div>
+							<ul class="tabs__list">
+								<li class="tabs__link">Замена сантехники</li>
+							</ul>	
+							<div class="tabs__titleli">
+								Потолок
+							</div>
+							<ul class="tabs__list">
+								<li class="tabs__link">Шпаклевка</li>
+								<li class="tabs__link">Покраска потолка</li>
+								<li class="tabs__link">Монтаж натяжного потолка</li>
+							</ul>																					
+						</div>
+						<div class="tabs__column">
+							<div class="tabs__header">
+								<p>Косметический </p> <p>от 5 дней</p>
+							</div>							
+							<div class="tabs__titleli">
+								Чистовые материалы <p>от 1 590 ₽/м2</p>
+							</div>
+							<ul class="tabs__list">
+								<li class="tabs__link">Декоративные элементы</li>
+								<li class="tabs__link">Лакокрасочные материалы</li>
+								<li class="tabs__link">Напольные покрытия</li>
+								<li class="tabs__link">Реечный и натяжной потолок</li>
+								<li class="tabs__link">Стеновые материалы</li>
+							</ul>
+							<div class="tabs__cost">
+								<p>Стоимость работ</p>
+								<span>от 2 290 ₽/м2</span>
+							</div>	
+							<a href="#" class="tabs__btn button">Рассчитать стоимость ремонта</a>																													
+						</div>				
+					</div>														
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="clients">
+		<div class="clients__container">
+			<div class="clients__title title">
+				За что клиенты нас рекомендуют
+			</div>
+			<div class="clients__items">
+				<div class="clients__item item-client">
+					<div class="item-client__icon">
+						<img src="img/clients/1.svg" alt="">
+					</div>
+					<div class="item-client__title">Работаем оперативно и точно в срок</div>
+					<div class="item-client__text">Оставьте заявку на бесплатный вызов замерщика и он приедет уже завтра! Готовы начать ремонт через 1 день после подписания договора</div>
+				</div>
+				<div class="clients__item item-client">
+					<div class="item-client__icon">
+						<img src="img/clients/2.svg" alt="">
+					</div>
+					<div class="item-client__title">Точный расчет материалов - Вы не платите за остатки</div>
+					<div class="item-client__text">Производим точный расчет материалов и не оставляем остатков. Если остатки остались - мы их выкупаем</div>
+				</div>	
+				<div class="clients__item item-client">
+					<div class="item-client__icon">
+						<img src="img/clients/3.svg" alt="">
+					</div>
+					<div class="item-client__title">Экономим Вам до 15% от стоимости материалов</div>
+					<div class="item-client__text">Мы закупаем материалы напрямую у производителя по оптовым скидкам</div>
+				</div>
+				<div class="clients__item item-client">
+					<div class="item-client__icon">
+						<img src="img/clients/4.svg" alt="">
+					</div>
+					<div class="item-client__title">Бесплатно убираем мусор</div>
+					<div class="item-client__text">Наши мастера сами уберут весь мусор и сделают генеральную уборку. При въезде вы получите чистую квартиру</div>
+				</div>	
+				<div class="clients__item item-client">
+					<div class="item-client__icon">
+						<img src="img/clients/5.svg" alt="">
+					</div>
+					<div class="item-client__title">Оплата после приемки работ</div>
+					<div class="item-client__text">Вы платите за каждый этап работы после подписания акта</div>
+				</div>
+				<div class="clients__item item-client">
+					<div class="item-client__icon">
+						<img src="img/clients/6.svg" alt="">
+					</div>
+					<div class="item-client__title">Гарантия 3 года на наши услуги</div>
+					<div class="item-client__text">Даем гарантию на все виды работ: строительно-монтажные. отделочные, электрика, чистовые, сантехнические</div>
+				</div>												
+			</div>
+		</div>
+	</section>
+	<section class="service">
+		<div class="service__container">
+			<div class="service__maintitle title">Мы бесплатно предоставляем следующие услуги</div>
+			<div class="service__items">
+				<div class="service__item">
+					<div class="service__img">
+						<img src="img/service/1.png" alt="">
+					</div>
+					<div class="service__title">Выезд замерщика и составление сметы</div>
+					<div class="service__text">
+						<p>Наш инженер проведет все замеры и проконсультирует вас. </p>
+						<p>В этот же день вы получите от нашего инженера полный расчет и подробную смету с учетом ваших пожеланий. </p>
+						Выезд инженера бесплатен и ни к чему вас не обязывает.						
+					</div>
+					<a href="#popup" class="service__btn button">Вызвать замерщика</a>
+				</div>
+				<div class="service__item">
+					<div class="service__img">
+						<img src="img/service/2.png" alt="">
+					</div>
+					<div class="service__title">Анализ сметы от других компаний</div>
+					<div class="service__text">
+						<p>Сомневаетесь в смете, которую Вам составила другая компания?</p> <p>Пришлите её нам!</p>Мы бесплатно проанализируем ее и подскажем Вам, какие ошибки и недочеты были совершены.
+					</div>
+					<a href="#popup" class="service__btn button">Получить анализ</a>
+				</div>
+				<div class="service__item">
+					<div class="service__img">
+						<img src="img/service/3.png" alt="">
+					</div>
+					<div class="service__title">Помощь в подборе и закупке материалов</div>
+					<div class="service__text">
+						Наш прораб бесплатно поедет вместе с вами в магазины, чтобы проконсультировать и помочь подобрать все необходимые материалы для чернового и чистового ремонта.
+					</div>
+					<a href="#popup" class="service__btn button">Получить консультацию</a>
+				</div>
+				<div class="service__item">
+					<div class="service__img">
+						<img src="img/service/4.png" alt="">
+					</div>
+					<div class="service__title">Экскурсия по нашим объектам</div>
+					<div class="service__text">
+						<p>Убедитесь лично в высоком качестве нашей работы!</p>
+						<p>Приглашаем вас посмотреть квартиры, которые находятся в процессе ремонта.</p>
+						Мы пришлем за вами автомобиль в удобное время и наш главный инженер проведет для вас экскурсию на объекте.						
+					</div>
+					<a href="#popup" class="service__btn button">Записаться на экскурсию</a>
+				</div>												
+			</div>
+		</div>
+	</section>
+	<section class="control">
+		<div class="control__container">
+			<div class="control__title title">
+				Контролируйте ремонт: с первого дня Вы будете в курсе всех процессов
+			</div>
+			<div class="control__body">
+				<ul class="control__list">
+					<li class="control__item">
+						<div class="control__item-img"><img src="img/control/1.png" alt=""></div>
+						<p>С нашими специалистами вы будете на связи в WhatsApp, Viber, Telegram или E-mail</p>
+					</li>
+					<li class="control__item">
+						<div class="control__item-img"><img src="img/control/2.png" alt=""></div>
+						<p>Наши мастера будут регулярно присылать вам фото и видео отчет</p>
+					</li>
+					<li class="control__item">
+						<div class="control__item-img"><img src="img/control/3.png" alt=""></div>
+						<p>На каждом этапе работы вы получите комментарии от мастера или дизайнера</p>
+					</li>
+					<li class="control__item">
+						<div class="control__item-img"><img src="img/control/4.png" alt=""></div>
+						<p>В любой момент вы можете запросить фото или видео объекта, чтобы убедиться в качестве проводимых работ</p>
+					</li>
+				</ul>
+				<div class="control__image">
+					<img src="img/control/main.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="easy">
+		<div class="easy__container">
+			<div class="easy__title title">
+				Работать с нами - просто!
+			</div>
+			<div class="easy__items">
+				<div class="easy__item">
+					<div class="easy__count">1</div>
+					<div class="easy__text">
+						<p>Вы оставляете заявку на сайте</p>
+						<span>Наш менеджер перезванивает вам и уточняет детали</span>
+					</div>
+				</div>
+				<div class="easy__item">
+					<div class="easy__count">2</div>
+					<div class="easy__text">
+						<p>К вам выезжает замерщик</p>
+						<span>Расчет стоимости занимает не больше 30 минут</span>
+					</div>
+				</div>	
+				<div class="easy__item">
+					<div class="easy__count">3</div>
+					<div class="easy__text">
+						<p>Заключаем <br>договор</p>
+						<span>Подписывая договор с нами, вы автоматически получаете гарантию на наши услуги до 3-х лет</span>
+					</div>
+				</div>
+				<div class="easy__item">
+					<div class="easy__count">4</div>
+					<div class="easy__text">
+						<p>Выполняем <br>ремонт</p>
+						<span>Работы ведутся в строгом соответствии с графиком по договору</span>
+					</div>
+				</div>
+				<div class="easy__item">
+					<div class="easy__count">5</div>
+					<div class="easy__text">
+						<p>Сдаём объект</p>
+						<span>Выполняем генеральную уборку и отдаем полностью законченный объект</span>
+					</div>
+				</div>											
+			</div>
+		</div>
+	</section>
+	<section id="projects" class="our-works">
+		<div class="our-works__container">
+			<div class="our-works__title title">Наши работы</div>
+			<div class="our-works__items">
+				<div class="our-works__item">
+					<div class="our-works__image">
+						<img src="img/our-works/1.png" alt="">
+					</div>
+					<div class="our-works__item-title">Дизайнерский ремонт 2-х комнатной квартиры</div>
+					<div class="our-works__texts">
+						<p>Площадь - 71 м 2</p>
+						<p>Время ремонта - 2,5 месяца</p>
+						<p>Стоимость работы: <span>568 000 ₽</span></p>
+						<p>Материалы:<span> 477 000 ₽</span></p>
+					</div>
+					<a href="#popup" class="our-works__btn button">Подробнее</a>
+				</div>
+				<div class="our-works__item">
+					<div class="our-works__image">
+						<img src="img/our-works/1.png" alt="">
+					</div>
+					<div class="our-works__item-title">Дизайнерский ремонт 2-х комнатной квартиры</div>
+					<div class="our-works__texts">
+						<p>Площадь - 71 м 2</p>
+						<p>Время ремонта - 2,5 месяца</p>
+						<p>Стоимость работы: <span>568 000 ₽</span></p>
+						<p>Материалы:<span> 477 000 ₽</span></p>
+					</div>
+					<a href="#popup" class="our-works__btn button">Подробнее</a>
+				</div>
+				<div class="our-works__item">
+					<div class="our-works__image">
+						<img src="img/our-works/1.png" alt="">
+					</div>
+					<div class="our-works__item-title">Дизайнерский ремонт 2-х комнатной квартиры</div>
+					<div class="our-works__texts">
+						<p>Площадь - 71 м 2</p>
+						<p>Время ремонта - 2,5 месяца</p>
+						<p>Стоимость работы: <span>568 000 ₽</span></p>
+						<p>Материалы:<span> 477 000 ₽</span></p>
+					</div>
+					<a href="#popup" class="our-works__btn button">Подробнее</a>
+				</div>				
+			</div>
+			<div class="our-works__more">
+				<a href="#">Загрузить ещё</a>
+			</div>
+		</div>
+	</section>
+	<section id="reviews" class="reviews">
+		<div class="reviews__container">
+			<div class="reviews__title title">Отзывы наших клиентов</div>
+			<div class="reviews__slider">
+				<div class="reviews__slide">
+					<div class="reviews__image">
+						<img src="img/reviews/1.png" alt="">
+					</div>
+					<div class="reviews__content">
+						<div class="reviews__name">
+							Евгения
+						</div>
+						<div class="reviews__source">
+							Источник: Яндекс.Справочник
+						</div>
+						<div class="reviews__texts">
+							<p>Очень хорошие мастера знающие свое дело. Нам делали ремонт в квартире. На всех этапах отчитывались о выполненной работе. </p>
+							<p>Сделали как обещали в срок. Видно что не набирают по десять объектов а занимаются только текущим. Мы с мужем очень довольны что нашли таких мастеров.</p>
+							Кстати нашли здесь на этом сайте по отзывам. Нет ни одного плохого отзыва и это не случайно. Работу выполняют качественно, ответственно и в срок. Обращайтесь не пожалеете если хотите иметь дело с порядочными мастерами своего дела.
+						</div>
+					</div>
+				</div>
+				<div class="reviews__slide">
+					<div class="reviews__image">
+						<img src="img/reviews/1.png" alt="">
+					</div>
+					<div class="reviews__content">
+						<div class="reviews__name">
+							Евгения
+						</div>
+						<div class="reviews__source">
+							Источник: Яндекс.Справочник
+						</div>
+						<div class="reviews__texts">
+							<p>Очень хорошие мастера знающие свое дело. Нам делали ремонт в квартире. На всех этапах отчитывались о выполненной работе. </p>
+							<p>Сделали как обещали в срок. Видно что не набирают по десять объектов а занимаются только текущим. Мы с мужем очень довольны что нашли таких мастеров.</p>
+							Кстати нашли здесь на этом сайте по отзывам. Нет ни одного плохого отзыва и это не случайно. Работу выполняют качественно, ответственно и в срок. Обращайтесь не пожалеете если хотите иметь дело с порядочными мастерами своего дела.
+						</div>
+					</div>
+				</div>
+				<div class="reviews__slide">
+					<div class="reviews__image">
+						<img src="img/reviews/1.png" alt="">
+					</div>
+					<div class="reviews__content">
+						<div class="reviews__name">
+							Евгения
+						</div>
+						<div class="reviews__source">
+							Источник: Яндекс.Справочник
+						</div>
+						<div class="reviews__texts">
+							<p>Очень хорошие мастера знающие свое дело. Нам делали ремонт в квартире. На всех этапах отчитывались о выполненной работе. </p>
+							<p>Сделали как обещали в срок. Видно что не набирают по десять объектов а занимаются только текущим. Мы с мужем очень довольны что нашли таких мастеров.</p>
+							Кстати нашли здесь на этом сайте по отзывам. Нет ни одного плохого отзыва и это не случайно. Работу выполняют качественно, ответственно и в срок. Обращайтесь не пожалеете если хотите иметь дело с порядочными мастерами своего дела.
+						</div>
+					</div>
+				</div>
+				<div class="reviews__slide">
+					<div class="reviews__image">
+						<img src="img/reviews/1.png" alt="">
+					</div>
+					<div class="reviews__content">
+						<div class="reviews__name">
+							Евгения
+						</div>
+						<div class="reviews__source">
+							Источник: Яндекс.Справочник
+						</div>
+						<div class="reviews__texts">
+							<p>Очень хорошие мастера знающие свое дело. Нам делали ремонт в квартире. На всех этапах отчитывались о выполненной работе. </p>
+							<p>Сделали как обещали в срок. Видно что не набирают по десять объектов а занимаются только текущим. Мы с мужем очень довольны что нашли таких мастеров.</p>
+							Кстати нашли здесь на этом сайте по отзывам. Нет ни одного плохого отзыва и это не случайно. Работу выполняют качественно, ответственно и в срок. Обращайтесь не пожалеете если хотите иметь дело с порядочными мастерами своего дела.
+						</div>
+					</div>
+				</div>
+				<div class="reviews__slide">
+					<div class="reviews__image">
+						<img src="img/reviews/1.png" alt="">
+					</div>
+					<div class="reviews__content">
+						<div class="reviews__name">
+							Евгения
+						</div>
+						<div class="reviews__source">
+							Источник: Яндекс.Справочник
+						</div>
+						<div class="reviews__texts">
+							<p>Очень хорошие мастера знающие свое дело. Нам делали ремонт в квартире. На всех этапах отчитывались о выполненной работе. </p>
+							<p>Сделали как обещали в срок. Видно что не набирают по десять объектов а занимаются только текущим. Мы с мужем очень довольны что нашли таких мастеров.</p>
+							Кстати нашли здесь на этом сайте по отзывам. Нет ни одного плохого отзыва и это не случайно. Работу выполняют качественно, ответственно и в срок. Обращайтесь не пожалеете если хотите иметь дело с порядочными мастерами своего дела.
+						</div>
+					</div>
+				</div>									
+			</div>
+		</div>
+	</section>
+	<section class="reward">
+		<div class="reward__container">
+			<div class="reward__title title">
+				Лучшая награда – это благодарные клиенты!
+			</div>
+			<div class="reward__content">
+				<div class="reward__texts">
+					<p>Этот сертификат мы получили благодаря честным отзывам наших клиентов!</p>
+					<p>Мы начали свою работу в 2017 году и за это время довели каждый ремонт до конца. Ни один клиент в процессе не отказался от работы с нами.</p> Спасибо вам за доверие!					
+				</div>
+				<div class="reward__image">
+					<img src="img/reward/1.png" alt="">
+				</div>				
+			</div>
+		</div>
+	</section>
+	<div class="video">
+		<div class="video__container">
+			<div class="video__title title">
+				Видео нескольких наших работ
+			</div>
+			<div class="video__youtube">
+				<iframe loading="lazy" src="https://www.youtube.com/embed/cywrbaAmMKE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe loading="lazy" src="https://www.youtube.com/embed/cywrbaAmMKE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+	<section class="service-cost">
+		<div class="service-cost__container">
+			<div class="service-cost__title title">
+				Цены на отдельные виды услуг
+			</div>
+			<div class="service-cost__content">
+				<ul class="service-cost__list">
+					<li class="service-cost__item-title">
+						Черновые отделочные работы
+					</li>
+					<li class="service-cost__item">Грунтовка пола - от 60 руб/м2</li>
+					<li class="service-cost__item">Грунтовка стен - от 65 руб/м2</li>
+					<li class="service-cost__item">Зачистка стен (краска, шпатлевка) - от 180 руб/м2</li>
+					<li class="service-cost__item">Штукатурка потолка - от 620 руб/м2</li>
+					<li class="service-cost__item">Грунтовка потолка - от 85 руб/м2</li>
+				</ul>
+				<ul class="service-cost__list">
+					<li class="service-cost__item-title">
+						Чистовые отделочные работы
+					</li>
+					<li class="service-cost__item">Укладка ламината - от 490 руб/м2</li>
+					<li class="service-cost__item">Окраска стен - от 240 руб/м2</li>
+					<li class="service-cost__item">Облицовка плиткой стен - от 1250 руб/м2</li>
+					<li class="service-cost__item">Оклейка стен обоями - от 390 руб/м2</li>
+					<li class="service-cost__item">Укладка паркетной доски и подложки - от 770 руб/м2</li>
+				</ul>		
+				<ul class="service-cost__list">
+					<li class="service-cost__item-title">
+						Электромонтажные работы
+					</li>
+					<li class="service-cost__item">Установка TV, телефонной, интернет точки - от 270 руб</li>
+					<li class="service-cost__item">Монтаж распаечной коробки с комутацией - от 400 руб/шт</li>
+					<li class="service-cost__item">Установка электроточки - от 245 руб/шт</li>
+					<li class="service-cost__item">Установка и подключение Диф Автомата - от 590 руб/шт</li>
+				</ul>			
+				<ul class="service-cost__list">
+					<li class="service-cost__item-title">
+						Сантехнические работы
+					</li>
+					<li class="service-cost__item">Монтаж и подключение умывальника - от 1095 руб/шт</li>
+					<li class="service-cost__item">Монтаж и подключение унитаза - от 1030 руб/шт</li>
+					<li class="service-cost__item">Установка ванны - от 3500 руб/шт</li>
+					<li class="service-cost__item">Монтаж и подключение водонагревателя - от 2100 руб</li>
+				</ul>									
+			</div>
+			<a href="" class="service-cost__button">Скачать полный прайс-лист</a>
+		</div>
+	</section>
+	<section class="ways">
+		<img src="img/ways/1.png" alt="">
+		<div class="ways__container">
+			<div class="ways__title title">
+				Хотите узнать 7 способов как сэкономить на ремонте до <span>30%</span> ?
+			</div>
+			<div class="ways__subtitle">
+				Укажите дату, когда вы планируете проводить ремонт и мы пришлем вам специальное предложение
+			</div>
+			<a href="" class="ways__btn button-other-color">Получить чек-лист</a>
+		</div>
+	</section>
+	<section class="about-us">
+		<div class="about-us__container">
+			<div class="about-us__title title">
+				О нас
+			</div>
+			<div class="about-us__subtitle">
+				<p>Работаем с 2017 года. За это время сдали более 537 объектов.</p>
+				<a href="#">Среди наших работ</a> были как маленькие квартиры-студии так и большие коттеджи
+			</div>
+			<div class="about-us__items">
+				<div class="about-us__item">
+					<div class="about-us__count">
+						1
+					</div>
+					<div class="about-us__text">
+						<span>Работаем по договору</span> <br>В договоре фиксируем все гарантии, смету и сроки
+					</div>
+				</div>
+				<div class="about-us__item">
+					<div class="about-us__count">
+						2
+					</div>
+					<div class="about-us__text">
+						В штате только высококлассные мастера. У нас работают специалисты с <span>опытом от 6 лет</span>
+					</div>
+				</div>
+				<div class="about-us__item">
+					<div class="about-us__count">
+						3
+					</div>
+					<div class="about-us__text">
+						<span>Соблюдаем сроки.</span> Заранее согласовываем с вами план работ и сроки. В случае задержки – выплатим неустойку за просроченные дни
+					</div>
+				</div>
+				<div class="about-us__item">
+					<div class="about-us__count">
+						4
+					</div>
+					<div class="about-us__text">
+						Каждому клиенту <span>подарок на выбор</span>
+					</div>
+				</div>												
+			</div>
+		</div>
+	</section>
+	<section class="masters">
+		<div class="masters__container">
+			<div class="masters__title title">
+				Вашим ремонтом будут заниматься опытные мастера
+			</div>
+			<div class="masters__items">
+				<div class="masters__item">
+					<div class="masters__img">
+						<img src="img/masters/1.png" alt="">
+					</div>
+					<div class="masters__name">
+						Александр
+					</div>
+					<div class="masters__info">
+						Сметчик-замерщик
+					</div>
+					<div class="masters__text">
+						Определяет стоимость строительство и помогает клиентам минимизировать затраты на ремонт и материалы
+					</div>
+				</div>
+				<div class="masters__item">
+					<div class="masters__img">
+						<img src="img/masters/2.png" alt="">
+					</div>
+					<div class="masters__name">
+						Руслан
+					</div>
+					<div class="masters__info">
+						Управляющий
+					</div>
+					<div class="masters__text">
+						Контроль качества оказываемых услуг, взаимодействие с персоналом
+					</div>
+				</div>
+				<div class="masters__item">
+					<div class="masters__img">
+						<img src="img/masters/3.png" alt="">
+					</div>
+					<div class="masters__name">
+						Владимир
+					</div>
+					<div class="masters__info">
+						Плиточник
+					</div>
+					<div class="masters__text">
+						Подготавливает поверхность стен. Проектирует схему раскладки плитки. Укладывает плитку по утвержденной схеме. Затирает швы, монтирует скрытые люки
+					</div>
+				</div>								
+			</div>
+		</div>
+	</section>
+	<div class="video-reviews">
+		<div class="video-reviews__container">
+			<div class="video-reviews__title title">
+				Видеоотзывы наших клиентов
+			</div>
+			<div class="video-reviews__slider">
+				<div class="video-reviews__slide">
+					<a data-fancybox="gallery" href="img/video/data.mp4">
+						<img src="img/video/play.png" alt="">
+						<div class="video-reviews__content">
+							<div class="video-reviews__review">
+								Видеоотзыв
+								<p>Дизайнерский ремонт</p>
+							</div>
+							<div class="video-reviews__name">
+								Иван Иванов<p>Ремонт в квартире 120 м2</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="video-reviews__slide">
+					<a data-fancybox="gallery" href="img/video/data.mp4">
+						<img src="img/video/play.png" alt="">
+						<div class="video-reviews__content">
+							<div class="video-reviews__review">
+								Видеоотзыв
+								<p>Дизайнерский ремонт</p>
+							</div>
+							<div class="video-reviews__name">
+								Иван Иванов<p>Ремонт в квартире 120 м2</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="video-reviews__slide">
+					<a data-fancybox="gallery" href="img/video/data.mp4">
+						<img src="img/video/play.png" alt="">
+						<div class="video-reviews__content">
+
+							<div class="video-reviews__review">
+								Видеоотзыв
+								<p>Дизайнерский ремонт</p>
+							</div>
+							<div class="video-reviews__name">
+								Иван Иванов<p>Ремонт в квартире 120 м2</p>
+							</div>
+						</div>
+					</a>
+				</div>	
+				<div class="video-reviews__slide">
+					<a data-fancybox="gallery" href="img/video/data.mp4">
+						<div class="video-reviews__content">
+							<img src="img/video/play.png" alt="">
+							<div class="video-reviews__review">
+								Видеоотзыв
+								<p>Дизайнерский ремонт</p>
+							</div>
+							<div class="video-reviews__name">
+								Иван Иванов<p>Ремонт в квартире 120 м2</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="video-reviews__slide">
+					<a data-fancybox="gallery" href="img/video/data.mp4">
+						<div class="video-reviews__content">
+							<img src="img/video/play.png" alt="">
+							<div class="video-reviews__review">
+								Видеоотзыв
+								<p>Дизайнерский ремонт</p>
+							</div>
+							<div class="video-reviews__name">
+								Иван Иванов<p>Ремонт в квартире 120 м2</p>
+							</div>
+						</div>
+					</a>
+				</div>											
+			</div>
+		</div>
+	</div>
+	<div class="discount">
+		<div class="discount__container">
+			<div class="discount__content">
+				<div class="discount__title">
+					Скидки от <span>5% до 20%</span> на ремонт вторичного жилья
+				</div>
+				<div class="discount__subtitle">
+					Скидка зависит от типа Вашего дома и его расположения
+				</div>
+			</div>
+			<form action="#" class="discount__form form-discount" onsubmit="send(event, 'send1.php')">
+				<div class="discount__form-title">
+					Рассчитайте стоимость ремонта и получите смету
+				</div>
+				<div class="discount__form-text">
+					Заполните Ваши контактные данные, чтобы мы могли Вам перезвонить, ответить на все Ваши вопросы и предоставить расчет
+				</div>
+				<div class="discount__form-name">
+					<p>Как к вам обращаться:</p>
+					<input type="text" name="form2name">
+				</div>
+				<div class="discount__form-number">
+					<p>Ваш телефон:</p>
+					<input name="form2phonenumber" type="text" placeholder="+7 347 123 45 67" onfocus="this.placeholder = ''"
+               onblur="this.placeholder = '+7 347 123 45 67'">
+				</div>				
+				<button class="discount__form-button button-other-color">
+					Получить расчет
+				</button>
+				<div class="discount__form-footer">
+					Отправляя заявку, вы соглашаетесь с <br><a href="#">политикой конфиденциальности</a>
+				</div>
+			</form>
+		</div>
+	</div>
+	<section class="questions">
+		<div class="questions__container">
+			<div class="questions__title title">
+				Ответы на популярные вопросы
+			</div>
+         <div class="questions__block one">
+            <div class="block">
+               <div class="block__title">
+                  Входят ли материалы в стоимость ремонта?
+               </div>
+               <div class="block__text">
+                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+               </div>
+            </div>
+            <div class="block">
+               <div class="block__title">
+                  Кто будет ремонтировать мою квартиру?             
+               </div>
+               <div class="block__text">
+               	В нашем штате работают только высококвалифицированные мастера с опытом ремонта различной сложности от 6 лет
+               </div>
+            </div>
+            <div class="block">
+               <div class="block__title">
+                  Как оплачиваются услуги и материалы?               
+               </div>
+               <div class="block__text">
+                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+               </div>
+            </div>
+            <div class="block">
+               <div class="block__title">
+                  Когда готовы приступить к работе?              
+                </div>
+               <div class="block__text">
+                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+               </div>
+            </div>
+            <div class="block">
+               <div class="block__title">
+                  Беретесь ли вы за мелкий ремонт?              
+                </div>
+               <div class="block__text">
+                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+               </div>
+            </div>
+            <div class="block">
+               <div class="block__title">
+                  Нужно ли вывозить мебель из квартиры на время ремонта?             
+                </div>
+               <div class="block__text">
+                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+               </div>
+            </div> 
+            <div class="block">
+               <div class="block__title">
+                  Какие строительные материалы вы используете? Какого качества?            
+                </div>
+               <div class="block__text">
+                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+               </div>
+            </div>  
+            <div class="block">
+               <div class="block__title">
+               	Можно ли жить во время ремонта в квартире?
+                </div>
+               <div class="block__text">
+                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+               </div>
+            </div>   
+             <div class="block">
+               <div class="block__title">
+               	Каковы условия гарантии на ремонт?
+                </div>
+               <div class="block__text">
+                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+               </div>
+            </div>                                                      
+         </div>
+		</div>
+	</section>
+	<div id="contacts" class="contacts">
+		<div class="contacts__map" id="map">
+		</div>
+		<div class="contacts_container">
+			<div class="contacts__body">
+				<div class="contacts__title">
+					Контакты
+				</div>
+				<a href="tel:83471234567" class="contacts__number">8 347 123 45 67</a>
+			   <div class="contacts__info">
+			   	г. Уфа, ул. Бикбая, д. 44а<br><a href="mailto:adress@mail.ru">adress@mail.ru</a>
+			   </div>				
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="footer__container">
+			<a href="#" class="footer__logo">
+				<img src="img/footerlogo.png" alt="">
+			</a>
+			<div class="footer__content">
+				<a href="#" class="footer__confidence">
+					Политика конфиденциальности
+				</a>
+				<div class="footer__text">
+					Информация на сайте не является публичной офертой.
+					Вся информация об услугах и ценах, предоставленная на сайте, носит исключительно информационный характер и ни при каких условиях не является публичной офертой
+				</div>
+				<div class="footer__copyright">
+					© Чистовой ремонт 2022
+				</div>
+			</div>
+		</div>
+	</footer>
+		<div id="popup" class="popup">
+			<span></span>
+         <div class="popup__body">
+				<form action="#" class="discount__form" onsubmit="send(event, 'send1.php')">
+					<div class="discount__form-title">
+						Рассчитайте стоимость ремонта и получите смету
+					</div>
+					<div class="discount__form-text">
+						Заполните Ваши контактные данные, чтобы мы могли Вам перезвонить, ответить на все Ваши вопросы и предоставить расчет
+					</div>
+					<div class="discount__form-name">
+						<p>Как к вам обращаться:</p>
+						<input type="text" name="form2name">
+					</div>
+					<div class="discount__form-number">
+						<p>Ваш телефон:</p>
+						<input name="form2phonenumber" type="text" placeholder="+7 347 123 45 67" onfocus="this.placeholder = ''"
+	               onblur="this.placeholder = '+7 347 123 45 67'">
+					</div>				
+					<button class="discount__form-button button-other-color">
+						Получить расчет
+					</button>
+					<div class="discount__form-footer">
+						Отправляя заявку, вы соглашаетесь с <br><a href="#">политикой конфиденциальности</a>
+					</div>
+				</form>
+         </div>
+      </div>	
+</div>
+<script src="js/nouislider.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/script.js"></script>  
+<script src="js/dynamicAdapt.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+</body>
+</html>
